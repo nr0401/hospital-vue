@@ -1,13 +1,11 @@
 <template>
+<!-- 管理系统 -->
     <div>
-        <p>医院首页</p>
+        
     </div>
 </template>
-
 <script>
 export default {
-    comments:{
-
-    }
+    
 }
 </script>
