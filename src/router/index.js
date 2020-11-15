@@ -1,14 +1,24 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
+
 import Home from '../views/serveHome.vue'
+
 import imain from '../components/serve/home/Main.vue'
+
 import docs from '../components/serve/users/doc.vue'
 import patients from '../components/serve/users/patients.vue'
+
 import regist from '../views/serve/registration.vue'
+
 import drugs from '../views/serve/drugAdmin.vue'
 import sys from '../views/serve/system.vue'
 import work from '../views/serve/working.vue'
+
 import pay from '../views/serve/charge.vue'
+import no from '../views/serve/nocharge.vue'
+import has from '../views/serve/hascharge.vue'
+import all from '../views/serve/allcharge.vue'
+
 
 Vue.use(VueRouter)
 
@@ -46,7 +56,21 @@ const routes = [
       // 收费信息
       {
         path: 'logistics/charge',
-        component: pay
+        component: pay,
+        children: [
+          {
+            path: 'all',
+            component: all
+          },
+          {
+            path: 'has',
+            component: has
+          },
+          {
+            path: 'no',
+            component: no
+          }
+        ]
       },
       // 药房管理
       {

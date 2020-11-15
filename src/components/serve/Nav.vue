@@ -26,7 +26,9 @@
               <i class="el-icon-arrow-down el-icon--right"></i>
             </span>
             <el-dropdown-menu slot="dropdown">
-              <el-dropdown-item>我的患者</el-dropdown-item>
+              <router-link :to="{ path: '/serve/users/patients' }">
+                <el-dropdown-item>我的患者</el-dropdown-item>
+              </router-link>
               <el-dropdown-item divided>退出</el-dropdown-item>
             </el-dropdown-menu>
           </el-dropdown>

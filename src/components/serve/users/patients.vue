@@ -17,7 +17,7 @@
             </el-table-column>
             <el-table-column prop="sex" label="性别" width="50">
             </el-table-column>
-            <el-table-column prop="doc" label="主治医生" width="80">
+            <el-table-column prop="doc" label="责任医生" width="80">
             </el-table-column>
             <el-table-column prop="status" label="就诊状态" width="80">
             </el-table-column>

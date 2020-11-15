@@ -1,5 +1,5 @@
 <template>
-<!-- 后端管理入口 -->
+  <!-- 后端管理入口 -->
   <div class="home">
     <div class="fixed-top">
       <inav />
@@ -11,7 +11,6 @@
       <el-col class="right" :xs="14" :sm="16" :md="18" :lg="20">
         <!-- 子路由 -->
         <router-view></router-view>
-        
       </el-col>
     </el-row>
   </div>
