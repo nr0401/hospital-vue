@@ -11,17 +11,17 @@
         <el-card shadow="hover" :body-style="{ padding: '20px' }" class="my-4">
           <h5>患者列表</h5>
           <el-table :data="patients" style="width: 100%" height="595">
-            <el-table-column fixed prop="name" label="姓名" width="80">
+            <el-table-column fixed prop="person.user.name" label="姓名" width="80">
             </el-table-column>
-            <el-table-column prop="age" label="年龄" width="50">
+            <el-table-column prop="person.user.age" label="年龄" width="50">
             </el-table-column>
-            <el-table-column prop="sex" label="性别" width="50">
+            <el-table-column prop="person.user.gender" label="性别" width="50">
             </el-table-column>
-            <el-table-column prop="doc" label="责任医生" width="80">
+            <el-table-column prop="docter.name" label="责任医生" width="80">
             </el-table-column>
             <el-table-column prop="status" label="就诊状态" width="80">
             </el-table-column>
-            <el-table-column prop="pay" label="缴费状态" width="80">
+            <el-table-column prop="total" label="缴费价格" width="80">
             </el-table-column>
             <el-table-column prop="symptom" label="主诉" width="300">
             </el-table-column>
@@ -70,18 +70,6 @@ export default {
     return {
       // 测试数据
       patients: [
-        {
-          date: "2016-05-03",
-          name: "王小虎",
-          age: "25",
-          sex: "男",
-          doc: "陈小刀",
-          status: "就诊",
-          pay: "已缴费",
-          symptom: "反复咳嗽、咳痰、气短5年，加重伴痰中带血1个月。",
-          history:
-            "既往体健，否认“高血压、冠心病、糖尿病”病史；否认“乙肝、结核”等传染病史；预防接种史不详；否认外伤史；无手术史；无输血史，无药物、食物过敏史",
-        },
       ],
     };
   },
@@ -91,6 +79,7 @@ export default {
       .get(url)
       .then((res) => {
         console.log(res.data);
+        this.patients = res.data;
       })
       .catch((err) => {
         console.error(err);

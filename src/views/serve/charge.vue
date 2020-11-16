@@ -12,34 +12,35 @@
     <el-row>
       <el-col :span="22" :offset="1" class="my-3">
         <el-card shadow="always" :body-style="{ padding: '20px' }">
-          <el-menu
-            :default-active="$route.path"
-            class="el-menu-demo"
-            mode="horizontal"
-            router
-            scroll
-          >
-            <el-menu-item index="/serve/logistics/charge/all"
-              >全部收费</el-menu-item
-            >
-            <el-menu-item index="/serve/logistics/charge/has"
-              >已收费</el-menu-item
-            >
-            <el-menu-item index="/serve/logistics/charge/no"
-              >未收费</el-menu-item
-            >
-          </el-menu>
-          <router-view></router-view>
+          <el-tabs v-model="activeName" @tab-click="handleClick">
+            <el-tab-pane label="未收费" name="nocharge">
+              <rateSheet />
+            </el-tab-pane>
+            <el-tab-pane label="已收费" name="hascharge">
+
+            </el-tab-pane>
+            <el-tab-pane label="全部收费" name="all"> 
+
+            </el-tab-pane>
+            
+            <el-button type="primary" style="position:absolute;right:10px;top:10px" size="mini" @click="add" plain>添加药品</el-button>
+          </el-tabs>
         </el-card>
       </el-col>
     </el-row>
   </div>
 </template>
 <script>
+import rateSheet from '../../components/serve/rateSheet'
+
 export default {
-  name: "Navbar",
+  components: {
+    rateSheet
+  },
   data() {
-    return {};
+    return {
+      activeName: "nocharge",
+    };
   },
   methods: {},
 };

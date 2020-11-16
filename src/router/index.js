@@ -15,9 +15,6 @@ import sys from '../views/serve/system.vue'
 import work from '../views/serve/working.vue'
 
 import pay from '../views/serve/charge.vue'
-import no from '../views/serve/nocharge.vue'
-import has from '../views/serve/hascharge.vue'
-import all from '../views/serve/allcharge.vue'
 
 
 Vue.use(VueRouter)
@@ -57,20 +54,6 @@ const routes = [
       {
         path: 'logistics/charge',
         component: pay,
-        children: [
-          {
-            path: 'all',
-            component: all
-          },
-          {
-            path: 'has',
-            component: has
-          },
-          {
-            path: 'no',
-            component: no
-          }
-        ]
       },
       // 药房管理
       {
