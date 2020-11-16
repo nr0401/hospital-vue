@@ -50,10 +50,10 @@
         </el-menu-item-group>
       </el-submenu>
       <!-- 系统设置 -->
-      <el-menu-item index="/serve/system">
+      <!-- <el-menu-item index="/serve/system">
         <i class="el-icon-setting"></i>
         <span slot="title">系统管理</span>
-      </el-menu-item>
+      </el-menu-item> -->
     </el-menu>
   </div>
 </template>

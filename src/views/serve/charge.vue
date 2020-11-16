@@ -2,11 +2,12 @@
   <!-- 收费信息 -->
   <div>
     <!-- 面包屑 -->
-    <el-breadcrumb separator-class="el-icon-arrow-right" class="ml-5 mt-3">
+    <el-breadcrumb
+      class="breadcrumb-container ml-5 mt-3"
+      separator-class="el-icon-arrow-right"
+    >
       <el-breadcrumb-item :to="{ path: '/serve' }">首页</el-breadcrumb-item>
-      <el-breadcrumb-item :to="{ path:'/serve/logistics/charge'}"> 收费信息</el-breadcrumb-item>
-
-      <el-breadcrumb-item > 收费信息</el-breadcrumb-item>
+      <el-breadcrumb-item> 收费信息</el-breadcrumb-item>
     </el-breadcrumb>
     <el-row>
       <el-col :span="22" :offset="1" class="my-3">
@@ -35,5 +36,11 @@
   </div>
 </template>
 <script>
-export default {};
+export default {
+  name: "Navbar",
+  data() {
+    return {};
+  },
+  methods: {},
+};
 </script>

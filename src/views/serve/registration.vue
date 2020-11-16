@@ -1,5 +1,5 @@
 <template>
-<!-- 挂号信息 -->
+  <!-- 挂号信息 -->
   <div>
     <!-- 面包屑 -->
     <el-breadcrumb separator-class="el-icon-arrow-right" class="ml-5 mt-3">
@@ -157,10 +157,11 @@ export default {
       ],
     };
   },
-  //   methods: {
-  //     formatter(row, column) {
-  //       return row.address;
-  //     },
-  //   },
+  methods: {
+    formatter(row) {
+      return row.address;
+    },
+    deleteRow() {},
+  },
 };
 </script>

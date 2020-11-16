@@ -38,7 +38,7 @@
             <el-table-column prop="Tue" label="周二" width="135">
             </el-table-column>
             <el-table-column prop="Wed" label="周三" width="135">
-            </el-table-column>
+            </el-table-column> 
             <el-table-column prop="Thu" label="周四" width="135">
             </el-table-column>
             <el-table-column prop="Fri" label="周五" width="135">
