@@ -26,7 +26,7 @@
             </div>
             <img
               style="width: 100%; height: 100%"
-              src="../../assets/lbo2.jpg"
+              src="@/assets/lbo2.jpg"
               class="mb-3"
             />
             <p class="card-text">
@@ -110,5 +110,8 @@ export default {
 .Chome a {
   text-decoration: none;
   color: black;
+}
+h2{
+  color: green;
 }
 </style>

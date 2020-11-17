@@ -4,7 +4,7 @@
   </div>
 </template>
 <script>
-import iRegistration from "@/components/Registration.vue";
+import iRegistration from "@/components/client/hospitalize/Registration.vue";
 export default {
   components: {
     iRegistration,

@@ -1,5 +1,46 @@
 <template>
   <div class="Cmenu">
+    <div class="row p-0 m-0 mb-3">
+      <div class="col-lg-4 md-2">
+        <img
+          src="@/assets/logo.png"
+          style="position: relative; top: 40px; height: 60px"
+        />
+      </div>
+      <div class="col-lg-2 md-1"></div>
+      <div class="col-lg-6 md-8dp">
+        <img
+          src="@/assets/btn03.jpg"
+          style="
+            width: 5rem;
+            height: 5rem;
+            margin: 5px;
+            position: relative;
+            top: -10px;
+          "
+        />
+        <el-button type="#36BBA9" plain style="position: relative; top:0.7rem">
+          <p>24小时急救电话</p>
+          <p>医院本部：0731-85145120</p>
+          <p>大托分站：0731-85639120</p>
+        </el-button>
+        <button
+          type="button"
+          class="btn btn-outline-success"
+          style="width: 100px; margin: 10px; position: relative; top: 20px"
+        >
+          登录
+        </button>
+        <button
+          type="button"
+          class="btn btn-outline-success"
+          style="width: 100px; position: relative; top: 20px"
+        >
+          注册
+        </button>
+      </div>
+    </div>
+
     <el-menu
       :default-active="$route.path"
       class="el-menu-demo pl-4"
@@ -36,13 +77,13 @@
       <el-submenu index="/relation">
         <template slot="title">交流平台</template>
         <el-menu-item index="/relation">交流平台</el-menu-item>
-        <el-menu-item index="/user">用户登录</el-menu-item>
+        <!-- <el-menu-item index="/user">用户登录</el-menu-item> -->
       </el-submenu>
       <!-- 学科专家 -->
-      <el-submenu index="/administrativepage">
+      <el-submenu index="/dept">
         <template slot="title">学科专家</template>
-        <el-menu-item index="/administrativepage">临床科室</el-menu-item>
-        <el-menu-item index="/outpatient">门诊医技科室</el-menu-item>
+        <el-menu-item index="/dept/administrativepage">临床科室</el-menu-item>
+        <el-menu-item index="/dept/outpatient">门诊医技科室</el-menu-item>
       </el-submenu>
       <!-- 药物临床试验 -->
       <el-submenu index="/drug">

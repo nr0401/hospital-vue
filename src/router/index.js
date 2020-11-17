@@ -31,6 +31,8 @@ import PersonalCenter from '../views/client/personalcenters/personalcenter.vue'
 import RegistrationRecord from '../views/client/personalcenters/registrationrecord.vue'
 import Patientrecord from '../views/client/personalcenters/patientrecord.vue'
 
+import drug from '../views/client/drug/drug.vue'
+import monad from '../views/client/drug/monad.vue'
 
 
 import Administrativepage from '../views/client/administrative office/Administrativepage.vue'
@@ -107,7 +109,7 @@ const routes = [
       component: client
     },
     {
-      path: '/about',
+      path: 'about',
       name: 'About',
       // route level code-splitting
       // this generates a separate chunk (about.[hash].js) for this route
@@ -116,111 +118,131 @@ const routes = [
         import( /* webpackChunkName: "about" */ '../views/About.vue')
     },
     {
-      path: '/introducedpage',
+      path: 'introducedpage',
       name: 'Introducedpage',
       component: Introducedpage
     },
     {
-      path: '/honorpage',
+      path: 'honorpage',
       name: 'Honorpage',
       component: Honorpage
     },
     {
-      path: '/leadershippage',
+      path: 'leadershippage',
       name: 'Leadershippage',
       component: Leadershippage
     },
     {
-      path: '/personalcenter',
+      path: 'personalcenter',
       name: 'PersonalCenter',
       component: PersonalCenter,
       children: [{
-        path: '/registrationrecord',
+        path: 'registrationrecord',
         name: 'RegistrationRecord',
         component: RegistrationRecord
       },
       {
-        path: '/patientrecord',
+        path: 'patientrecord',
         name: 'Patientrecord',
         component: Patientrecord
       },
-
       ]
     },
     {
-      path: '/registrationpage',
+      path: 'registrationpage',
       name: 'Registrationpage',
       component: Registrationpage,
       children: [{
-        path: '/doctorInformation',
+        path: 'doctorInformation',
         name: 'DoctorInformation',
         component: DoctorInformation
       },
 
       {
-        path: '/doctorInformationpage2',
+        path: 'doctorInformationpage2',
         name: 'DoctorInformationpage2',
         component: DoctorInformationpage2
       },
       {
-        path: '/searchpage',
+        path: 'searchpage',
         name: 'Searchpage',
         component: Searchpage
       },
       {
-        path: '/haoyuanpage',
+        path: 'haoyuanpage',
         name: 'Haoyuanpage',
         component: Haoyuanpage,
         children: [{
-          path: '/querenpage',
+          path: 'querenpage',
           name: 'Querenpage',
           component: Querenpage
         }]
       },
       {
-        path: '/haoyuanxiapage',
+        path: 'haoyuanxiapage',
         name: 'Haoyuanpagexia',
         component: Haoyuanxiapage
       },
       {
-        path: '/guahaodanpage',
+        path: 'guahaodanpage',
         name: 'Guahaodan',
         component: Guahaodan
       }
 
       ]
     },
+
     {
-      path: '/administrativepage',
-      name: 'Administrativepage',
-      component: Administrativepage
+      path: '/drug',
+      name: 'drug',
+      component: drug
     },
     {
-      path: '/outpatient',
-      name: 'outpatient',
-      component: outpatient
+      path: '/monad',
+      name: 'monad',
+      component: monad
     },
+    // 部门路由
     {
-      path: '/dept',
+      path: 'dept',
       name: 'dept',
-      component: dept
+      component: dept,
+      children: [
+        {
+          path: 'administrativepage',
+          name: 'Administrativepage',
+          component: Administrativepage,
+          children: [
+            {
+              path: 'alldept',
+              name: 'alldept',
+              component: alldept
+            }]
+        },
+        {
+          path: 'outpatient',
+          name: 'outpatient',
+          component: outpatient,
+          children: [
+            {
+              path: 'alldept',
+              name: 'alldept',
+              component: alldept
+            },]
+        },
+      ]
     },
     {
-      path: '/alldept',
-      name: 'alldept',
-      component: alldept
-    },
-    {
-      path: '/relation',
+      path: 'relation',
       name: 'relation',
       component: relation
     }, {
-      path: '/library',
+      path: 'library',
       name: 'library',
       component: library
     },
     {
-      path: '/user',
+      path: 'user',
       name: 'user',
       component: user,
       meta: {

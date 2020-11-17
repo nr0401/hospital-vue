@@ -11,22 +11,22 @@
           <el-submenu index="1">
             <template slot="title">
               <i class="el-icon-location"></i>
-              <span style="font-size: 30px; color: green">临床科室</span>
+              <span style="font-size: 30px; color: green">药物实验</span>
             </template>
           </el-submenu>
 
           <router-link
             class="nav-link"
-            to="/dept"
+            to="/drug"
             style="color: black; font-size: 20px"
-            >神经内科</router-link
+            >国家药物临床试验机构</router-link
           >
 
           <router-link
             class="nav-link"
-            to="/dept"
+            to="/monad"
             style="color: black; font-size: 20px"
-            >神经内科</router-link
+            >伦理委员会</router-link
           >
         </el-menu>
       </el-col>
@@ -36,15 +36,11 @@
 
 
 <style>
-.el-menu-vertical-demo:not(.el-menu--collapse) {
-  /* width: 300px; */
-  min-height: 400px;
-}
 </style>
 
 <script>
 export default {
-  name: "Dept",
+  name: "Drug",
   data() {
     return {
       isCollapse: true,

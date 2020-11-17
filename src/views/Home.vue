@@ -2,10 +2,9 @@
   <div id="app" class="clinet">
     <div v-if="!$route.meta.keepAlive">
       <iNav />
-      <router-view></router-view>
+      <router-view  class="cbody"></router-view>
         <iBottom />
     </div>
-    <router-view v-if="$route.meta.keepAlive"></router-view>
   </div>
 </template>
 
@@ -27,5 +26,8 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
+}
+.cbody{
+  min-height: 710px;
 }
 </style>

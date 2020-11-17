@@ -14,7 +14,6 @@
               <span style="font-size: 30px; color: green">科室导航</span>
             </template>
           </el-submenu>
-
           <router-link
             class="nav-link"
             to="/administrativepage"
@@ -41,10 +40,6 @@
 
 
 <style>
-.el-menu-vertical-demo:not(.el-menu--collapse) {
-  /* width: 300px; */
-  min-height: 400px;
-}
 </style>
 
 <script>

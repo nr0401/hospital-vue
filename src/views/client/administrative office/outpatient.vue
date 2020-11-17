@@ -1,25 +1,32 @@
 <template>
-  <div>
-    <div class="row">
-      <div class="col-3">
-        <Xlnavigation />
-      </div>
-      <div class="col-9">
-        <router-link class="nav-link" to="/alldept" style="display: flex">
+  <div class="mt-3">
+    <el-row>
+      <el-col :span="3" :offset="0">
+        <router-link to="/dept/outpatient/alldept">
           <button type="button" class="btn btn-outline-success">
-            急诊科
-          </button></router-link
-        >
-      </div>
-    </div>
+            健康中心
+          </button>
+        </router-link>
+      </el-col>
+      <el-col :span="3" :offset="0">
+        <router-link to="/dept/outpatient/alldept">
+          <button type="button" class="btn btn-outline-success">
+            电生理科
+          </button>
+        </router-link>
+      </el-col>
+    </el-row>
+
+    <!-- <Xlnavigation /> -->
+    <router-view></router-view>
   </div>
 </template>
 <script>
-import Xlnavigation from "@/components/client/administrative office/Xlnavigation.vue";
+// import Xlnavigation from "@/components/client/administrative office/Xlnavigation.vue";
 export default {
   name: "outpatient",
   components: {
-    Xlnavigation,
+    // Xlnavigation,
   },
 };
 </script>
