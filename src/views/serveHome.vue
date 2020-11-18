@@ -1,6 +1,6 @@
 <template>
   <!-- 后端管理入口 -->
-  <div class="home">
+  <div class="serveHome">
     <div class="fixed-top">
       <inav />
     </div>
@@ -18,11 +18,16 @@
 
 <script>
 // @ is an alias to /src
+<<<<<<< HEAD
 import inav from "../components/serve/Nav.vue";
 import imenu from "../components/serve/Menu.vue";
 
+=======
+import inav from "../components/serve/serveNav.vue";
+import imenu from "../components/serve/serveMenu.vue";
+>>>>>>> 175c0b3202c4a9999a3b4368310deac5eb509618
 export default {
-  name: "Home",
+  name: "serveHome",
   components: {
     inav,
     imenu,
