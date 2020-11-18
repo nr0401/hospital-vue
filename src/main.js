@@ -1,5 +1,5 @@
 import Vue from 'vue';
-import  axiox from  './plugins/axios'
+import './plugins/axios'
 import ElementUI from 'element-ui';
 import 'element-ui/lib/theme-chalk/index.css';
 import App from './App.vue';
@@ -22,6 +22,5 @@ new Vue({
   el: '#app',
   router,
   store,
-  axiox,
   render: h => h(App)
 }).$mount('#app')

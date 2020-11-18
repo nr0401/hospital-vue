@@ -27,7 +27,7 @@
         </el-menu-item-group>
       </el-submenu>
       <!-- 挂号信息 （当前挂号，已就诊等） -->
-      <el-menu-item index="/serve/registration">
+      <el-menu-item index="/serve/registration" @click="registration">
         <i class="el-icon-first-aid-kit"></i>
         <span slot="title">挂号信息</span>
       </el-menu-item>
@@ -60,8 +60,20 @@
 
 
 <script>
+import { mapActions } from "vuex";
 export default {
   name: "imenu",
+  data() {
+    return {};
+  },
+  computed: {
+  },
+  methods: {
+    ...mapActions(["gainRegistrations"]),
+    registration() {
+      this.gainRegistrations();
+    },
+  },
 };
 </script>
 <style lang="css">

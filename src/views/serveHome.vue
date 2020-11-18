@@ -20,13 +20,14 @@
 // @ is an alias to /src
 import inav from "../components/serve/Nav.vue";
 import imenu from "../components/serve/Menu.vue";
+
 export default {
   name: "Home",
   components: {
     inav,
     imenu,
   },
-};
+};  
 </script>
 <style lang="css">
 .body {
